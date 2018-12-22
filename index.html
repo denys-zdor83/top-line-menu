@@ -8,12 +8,45 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
+	<div class="top-line">
 
-	</header>
+	</div>
+	<header>
+		<a class="btn">Press me</a>
+	</header>b
 
 	<div id="main-body">
-		
+
 	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script>
+	// Scroll Up --------
+		var scrollHight = $('header').height();
+			var btnTop = $('.main-body');
+
+			$(window).scroll(function(event) {
+				var currentHight = $(this).scrollTop();
+				console.log(scrollHight);
+				console.log(currentHight);
+				if (currentHight >= scrollHight) {
+					$('.top-line').addClass('top-line_active');
+				} else {
+					$('.top-line').removeClass('top-line_active');
+				}
+			});
+	</script>
+
+	<!-- <script>
+		$(function () {  
+			$('.btn').click(function () { 
+				$('.top-line').addClass('top-line_active');
+			});
+		});
+	</script> -->
+
 </body>
 </html>
